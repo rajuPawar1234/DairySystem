@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+
+<definition name="base.login" template="loginLayout.jsp">
+         <put-attribute name="title" value=""/>
+          <put-attribute name="body" value=""/>
+</definition>
+
+<definition name="mainLogin" extends="base.login">
+		 <put-attribute name="title" value="Main Login"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/main/Login.jsp"></put-attribute>
+</definition>
+
+<definition name="base.layout" template="baselayout.jsp">
+         <put-attribute name="title" value=""/>
+          <put-attribute name="body" value=""/>
+</definition>
+
+<definition name="mainHome" extends="base.layout">
+		 <put-attribute name="title" value="Main Home"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/jsp/home.jsp"></put-attribute>
+</definition>
+
+<definition name="purchaseOrder" extends="base.layout">
+		 <put-attribute name="title" value="Purchase Order"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/jsp/farmer.jsp"></put-attribute>
+</definition>
+
+<!-- farmerPage -->
+<definition name="farmerPage" extends="base.layout">
+		 <put-attribute name="title" value="Farmer"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/jsp/farmer.jsp"></put-attribute>
+</definition>
+
+
+
+<!-- Master -->	
+<definition name="rateMasterCow" extends="base.layout">
+		 <put-attribute name="title" value="Rate Master"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/master/ratemaster.jsp"></put-attribute>
+</definition>
+
+<definition name="rateMasterBuffalo" extends="base.layout">
+		 <put-attribute name="title" value="Rate Master"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/master/ratemasterBuffalo.jsp"></put-attribute>
+</definition>
+
+<!-- collectionPage -->
+<definition name="collectionPage" extends="base.layout">
+		 <put-attribute name="title" value="Daily Collection"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/jsp/collectionPage.jsp"></put-attribute>
+</definition>
+
+<!-- devloperMaster -->
+<definition name="devloperMaster" extends="base.login">
+		 <put-attribute name="title" value="Devloper Master"></put-attribute>
+		 <put-attribute name="body" value="/WEB-INF/main/developerMaster.jsp"></put-attribute>
+</definition>
+
+<!-- Access Denied -->
+	<definition name="accessD" extends="base.login">
+		<put-attribute name="title" value="Access Denied" />
+		<put-attribute name="body" value="/WEB-INF/main/accessDenied.jsp" />
+	</definition>
+
+</tiles-definitions>
